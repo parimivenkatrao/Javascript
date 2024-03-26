@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Button Color Example</title>
+    <style>
+        /* CSS to style the button */
+        .color-button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: chocolate ; text-align: center;">Change Button Color Example</h1>
+
+    <!-- Button with inline JavaScript to change its color -->
+	<center>
+    <button class="color-button" onclick="changeColor()">Click Me</button>
+	</center>
+
+    <!-- Inline JavaScript to change the button color -->
+    <script>
+        function changeColor() {
+            var button = document.querySelector('.color-button');
+            var currentColor = button.style.backgroundColor;
+            
+            // Change color logic
+            if (currentColor === 'rgb(0, 123, 255)') {
+                button.style.backgroundColor = '#28a745'; // Change to green
+            } else {
+                button.style.backgroundColor = '#007bff'; // Change back to blue
+            }
+        }
+    </script>
+</body>
+</html>
